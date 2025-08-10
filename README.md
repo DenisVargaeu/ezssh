@@ -105,17 +105,12 @@ In the GUI you can:
 
 ---
 
-## 📷 Screenshot (GUI)
-
-*(Add your GUI screenshot here like `screenshot.png` for extra clarity)*
-
----
 
 ## 🛠 Requirements
 
 * Windows OS (GUI uses WinAPI)
 * C compiler (GCC/MinGW or MSVC) if building from source
-* SSH client installed (e.g., OpenSSH)
+* SSH Enabled program usees windows ssh (ssh server@server)
 
 ---
 
