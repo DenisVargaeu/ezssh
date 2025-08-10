@@ -22,7 +22,7 @@ Written in **C** and designed for Windows.
 ### Option 1: Download Pre-built Executable
 
 1. **Download the executable:**  
-   Go to the [Releases page](https://github.com/your-username/ezssh/releases) and download the latest Windows version `ezssh.exe`.
+   Go to the [Releases page](https://github.com/DenisVargaeu/ezssh/releases/new) and download the latest Windows version `ezssh.exe`.
 
 2. **Add to system PATH:**  
    - Move the downloaded `ezssh.exe` to a folder where you want to keep it, e.g.,  
