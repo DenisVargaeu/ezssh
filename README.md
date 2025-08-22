@@ -1,122 +1,101 @@
 
-# EzSSH
+# 🚀 EzSSH
 
-EzSSH is a simple tool for managing SSH connections via command line and a basic Windows GUI.  
-It supports creating, editing, deleting, and launching saved SSH configurations.  
-Written in **C** and designed for Windows.
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge\&logo=windows\&logoColor=white)
+![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-4D4D4D?style=for-the-badge\&logo=windows-terminal\&logoColor=white)
+![C](https://img.shields.io/badge/C_Language-00599C?style=for-the-badge\&logo=c\&logoColor=white)
+
+> **EzSSH** is a simple tool for managing SSH connections through the command line and a basic Windows GUI.
+> Written in **C**, designed to be fast and minimalistic.
 
 ---
 
 ## ✨ Features
 
-- 🖥 **CLI mode** – easy commands for managing SSH saves  
-- 🪟 **GUI mode** – simple Windows interface (beta)  
-- 📁 Manage saved connections quickly  
-- 🚀 Fast connection launch  
-- 🛠 Edit and delete existing saved configs  
+* 🖥 **CLI mode** – quick commands for managing saved SSH connections
+* 🪟 **GUI mode (beta)** – simple WinAPI interface
+* 📁 Manage and organize saved configs
+* 🚀 One-click fast connections
+* 🛠 Edit and delete saved configs
 
 ---
 
 ## 📦 Installation
 
-### Option 1: Download Pre-built Executable
+### 🔹 Option 1: Download Pre-built Executable
 
-1. **Download the executable:**  
-   Go to the [Releases page](https://github.com/DenisVargaeu/ezssh/releases/new) and download the latest Windows version `ezssh.exe`.
+1. Download `ezssh.exe` from the [Releases](https://github.com/DenisVargaeu/ezssh/releases/new).
+2. Move it to a folder, e.g. `C:\Tools\ezssh\`.
+3. Add that folder to your **PATH**:
 
-2. **Add to system PATH:**  
-   - Move the downloaded `ezssh.exe` to a folder where you want to keep it, e.g.,  
-     `C:\Tools\ezssh\`  
-   - Add this folder to your Windows PATH environment variable:  
-     - Press **Start**, type **Environment Variables**, and open **Edit the system environment variables**  
-     - Click **Environment Variables...**  
-     - Under **System variables**, find and select **Path**, then click **Edit...**  
-     - Click **New** and add the folder path, e.g., `C:\Tools\ezssh\`  
-     - Confirm by clicking **OK** on all windows.
+   * \**Start → Environment Variables → Path → Edit → New → C:\Tools\ezssh\**
+4. Restart your terminal.
+5. Verify installation:
 
-3. **Restart your command prompt** or terminal to reload PATH.
-
-4. **Test installation:**  
-   Open a new Command Prompt and type:
-
+   ```bash
    ezssh -v
-
-
-You should see the version info.
+   ```
 
 ---
 
-### Option 2: Build from Source
+### 🔹 Option 2: Build from Source
 
-If you want to build from source:
-
-1. **Clone the repo:**
+1. Clone the repo:
 
    ```bash
    git clone https://github.com/your-username/ezssh.git
    cd ezssh
    ```
 
-2. **Make sure you have a C compiler** (like `gcc` from MinGW or MSVC):
+2. Check your compiler (GCC / MSVC):
 
    ```bash
    gcc --version
    ```
 
-3. **Build the project:**
+3. Build the project:
 
    ```bash
    gcc ezssh.c -o ezssh -mwindows
    ```
 
+---
 
+## ⚡ Usage
 
-## 🚀 Usage
-
-### CLI mode
-
-Run the program with commands:
-
-```
-ezssh -n             # create a new save
-ezssh -c <name>      # connect to a save
-ezssh --c <name>     # connect in a new window
-ezssh -in <name>     # show info about a save
-ezssh -e <name>      # edit a save
-ezssh -d <name>      # delete a save
-ezssh -l             # list all saves
-ezssh -v             # show program version
-ezssh -gui           # open GUI menu (beta)
-```
-
-### GUI mode (beta)
-
-Start GUI with:
+### 🖥 CLI Commands
 
 ```bash
-ezssh -gui
+ezssh -n             # create a new configuration
+ezssh -c <name>      # connect to a saved server
+ezssh --c <name>     # connect in a new window
+ezssh -in <name>     # show config details
+ezssh -e <name>      # edit a configuration
+ezssh -d <name>      # delete a configuration
+ezssh -l             # list all configurations
+ezssh -v             # show version info
+ezssh -gui           # launch GUI (beta)
 ```
 
-In the GUI you can:
+### 🪟 GUI Mode (beta)
 
-* Type the connection name and click **Connect**
-* Click **New Connection** to create a save
-* View info about a saved connection
+* Click **New Connection** → create and save a connection
+* Enter connection name + **Connect** → quick connect
+* View info about saved connections
 
 ---
 
-
 ## 🛠 Requirements
 
-* Windows OS (GUI uses WinAPI)
-* C compiler (GCC/MinGW or MSVC) if building from source
-* SSH Enabled program usees windows ssh (ssh server@server)
+* Windows OS (GUI built with WinAPI)
+* C compiler (MinGW / MSVC) if building from source
+* Windows SSH client (`ssh.exe`)
 
 ---
 
 ## 📄 License
 
-Created by Denis Varga, released under the MIT License.
+MIT License – © 2025 [Denis Varga](https://denisvarga.eu)
 
 ---
 
@@ -126,4 +105,3 @@ Created by Denis Varga, released under the MIT License.
 * **Website:** [denisvarga.eu](https://denisvarga.eu)
 * **Studio:** DV Studio
 
-`
