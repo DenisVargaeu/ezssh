@@ -1,3 +1,6 @@
+Jasnéee, Denis 😎, môžeme tvoj README doplniť o **inštalátor NSIS** a aj o možnosť **winget**. Tu je návrh, ako to môže vyzerať:
+
+---
 
 # 🚀 EzSSH
 
@@ -28,36 +31,67 @@
 2. Move it to a folder, e.g. `C:\Tools\ezssh\`.
 3. Add that folder to your **PATH**:
 
-   * \**Start → Environment Variables → Path → Edit → New → C:\Tools\ezssh\**
+   * Start → Environment Variables → Path → Edit → New → `C:\Tools\ezssh\`
 4. Restart your terminal.
 5. Verify installation:
 
-   ```bash
-   ezssh -v
-   ```
+```bash
+ezssh -v
+```
 
 ---
 
-### 🔹 Option 2: Build from Source
+### 🔹 Option 2: Use the NSIS Installer (Recommended)
+
+1. Download the installer `EzSSHInstaller.exe` from the [Releases](https://github.com/DenisVargaeu/ezssh/releases/new).
+2. Run it → it will:
+
+   * Copy `ezssh.exe` to `C:\Program Files\Denis\ezssh\`
+   * Create a desktop shortcut
+   * Add the folder to your **PATH** automatically
+3. After installation, open a new terminal and type:
+
+```bash
+ezssh
+```
+
+4. To uninstall → use the **Add/Remove Programs** in Windows.
+
+---
+
+### 🔹 Option 3: Install via Winget
+
+If you want EzSSH available system-wide using **Windows Package Manager**:
+
+```powershell
+winget install Denis.EzSSH
+```
+
+> This requires the app to be published in the official [winget-pkgs](https://github.com/microsoft/winget-pkgs) repository.
+> The installer will handle PATH and shortcuts automatically.
+
+---
+
+### 🔹 Option 4: Build from Source
 
 1. Clone the repo:
 
-   ```bash
-   git clone https://github.com/your-username/ezssh.git
-   cd ezssh
-   ```
+```bash
+git clone https://github.com/your-username/ezssh.git
+cd ezssh
+```
 
 2. Check your compiler (GCC / MSVC):
 
-   ```bash
-   gcc --version
-   ```
+```bash
+gcc --version
+```
 
 3. Build the project:
 
-   ```bash
-   gcc ezssh.c -o ezssh -mwindows
-   ```
+```bash
+gcc ezssh.c -o ezssh -mwindows
+```
 
 ---
 
@@ -105,3 +139,8 @@ MIT License – © 2025 [Denis Varga](https://denisvarga.eu)
 * **Website:** [denisvarga.eu](https://denisvarga.eu)
 * **Studio:** DV Studio
 
+---
+
+Ak chceš, môžem ti rovno pripraviť **ukážkový Winget manifest** pre EzSSH, ktorý môžeš hneď odoslať do winget-pkgs, aby bolo všetko ready na inštaláciu cez `winget install Denis.EzSSH`.
+
+Chceš, aby som to spravil?
